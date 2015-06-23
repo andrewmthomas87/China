@@ -123,41 +123,47 @@ section#main>div {
 section#main div div {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	width: 100%;
 	text-align: center;
 	opacity: 0;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	-webkit-transform: translate(0, -50%);
+	        transform: translate(0, -50%);
 	-webkit-transition: opacity 0.5s ease;
 	        transition: opacity 0.5s ease;
-}
-
-section#main div div:after {
-	content: attr(description);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	color: #fff;
-	padding: 1em 2em;
-	background-color: rgba(0, 0, 0, 0.75);
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.25em;
-	font-weight: 300;
-	text-align: center;
-	white-space: normal;
 }
 
 section#main div div.active {
 	opacity: 1;
 }
 
+section#main div div p {
+	display: inline-block;
+	color: #fff;
+	max-width: 25vw;
+	max-height: 85vh;
+	padding: 0;
+	margin: 0;
+	margin-right: 2.5vw;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+	vertical-align: middle;
+	white-space: normal;
+}
+
 section#main div div img {
-	display: block;
+	display: inline-block;
 	min-width: 60vmin;
 	min-height: 60vmin;
 	max-width: 85vw;
 	max-height: 85vh;
 	padding: 0;
 	margin: 0;
+}
+
+section#main div div p+img {
+	min-width: 45vmin;
+	min-height: 45vmin;
+	max-width: 45vw;
+	vertical-align: middle;
 }
